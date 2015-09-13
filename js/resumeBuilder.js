@@ -3,7 +3,7 @@
 var myContact = {
 	mobile : "07281923",
 	email : "blabla@bla.bla",
-	github : "https://www.github.com/nhimkova",
+	github : "nhimkova",
 	twitter : "nhimkova",
 	location : "London"
 };
@@ -86,6 +86,7 @@ var bio = {
 		for (var item in contactKeys) {
 			var fContactGeneric= HTMLcontactGeneric.replace("%contact%",contactKeys[item]).replace("%data%",bio.contacts[contactKeys[item]]);
 			$("#topContacts").append(fContactGeneric);
+			$("#footerContacts").append(fContactGeneric);
 		}
 		var fBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 		var fWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
